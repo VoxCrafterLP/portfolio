@@ -1,0 +1,9 @@
+{
+  "TypeScript": {
+    "singleQuote": true,
+    "object_curly_spacing": true,
+    "beautifiers": [
+      "Prettier"
+    ]
+  }
+}
