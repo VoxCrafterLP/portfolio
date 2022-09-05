@@ -34,7 +34,7 @@ const Navbar = () => {
 	}, [selectedItem]);
 
 	return (
-		<div className="text-white px-4 sm:px-64 py-8">
+		<div className="text-white px-4 xl:px-64 py-8">
 			<ul className="flex flex-col sm:flex-row sm:place-content-between gap-8 sm:gap-0">
 				<li className="text-2xl font-black tracking-wide">
 					voxcrafter.dev

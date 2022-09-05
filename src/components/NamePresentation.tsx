@@ -10,7 +10,7 @@ const NamePresentation = () => {
 	});
 
 	return (
-		<div className="text-white">
+		<div className="text-white w-[32rem]">
 			<span className="absolute w-1 h-48 sm:h-28 bg-white rounded-lg" />
 			<h1 className="ml-8 text-7xl font-semibold">
 				<span>{text}</span>
