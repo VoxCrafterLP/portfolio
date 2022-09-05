@@ -14,7 +14,14 @@ module.exports = {
 			xl: '1280px',
 			'2xl': '1536px',
 		},
-		extend: {},
+		extend: {
+			colors: {
+				'dark_gray': {
+					100: '#121212',
+					200: '#111111'
+				}
+			}
+		},
 	},
 	plugins: [],
 };
