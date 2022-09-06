@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
 	return (
-		<>
+		<div>
 			<div className="text-white text-center flex flex-col items-center py-14 bg-dark_gray-100">
 				<div>
 					<h1 className="font-semibold text-2xl text-white mb-2 mt-4">
@@ -71,7 +71,7 @@ const Footer = () => {
 			<div className="bg-dark_gray-200 text-gray-400 flex flex-col items-center py-1">
 				<span>©2022 Alex Drui</span>
 			</div>
-		</>
+		</div>
 	);
 };
 
