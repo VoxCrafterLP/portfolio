@@ -1,16 +1,17 @@
 import { AnimationControls, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 	const indicatorControls: AnimationControls = useAnimation();
 	const [selectedItem, setSelectedItem] = useState(0);
 
 	const navbarItems: Array<{ name: string; link: string }> = [
-		{ name: 'Home', link: '#' },
-		{ name: 'About', link: '#' },
-		{ name: 'Projects', link: '#' },
-		{ name: 'Blog', link: '#' },
-		{ name: 'Contact', link: '#' },
+		{ name: 'Home', link: '/' },
+		{ name: 'About', link: '/about' },
+		{ name: 'Projects', link: '/projects' },
+		{ name: 'Blog', link: 'https://blog.voxcrafter.dev/' },
+		{ name: 'Contact', link: '/contact' },
 	];
 
 	useEffect(() => {
@@ -23,7 +24,8 @@ const Navbar = () => {
 		let marginLeft = 0;
 		for (let i = 0; i < selectedItem; i++)
 			//2.5rem and 1rem
-			marginLeft = marginLeft + navItems[i].clientWidth + (mobileView ? 16 : 40);
+			marginLeft =
+				marginLeft + navItems[i].clientWidth + (mobileView ? 16 : 40);
 
 		indicatorControls.start({
 			marginLeft: marginLeft + 'px',
@@ -60,7 +62,18 @@ const Navbar = () => {
 								}}
 								onClick={() => setSelectedItem(index)}
 							>
-								{value.name}
+								{value.link.startsWith('http') ? (
+									<a href={value.link}>{value.name}</a>
+								) : (
+									<NavLink
+										to={value.link}
+										className={({ isActive }) =>
+											isActive ? 'text-purple-500' : 'text-white'
+										}
+									>
+										{value.name}
+									</NavLink>
+								)}
 							</motion.span>
 						)
 					)}
