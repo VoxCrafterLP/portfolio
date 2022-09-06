@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			sans: '"Roboto"',
+			handwritten: '"Dancing Script"',
 			display: ['"Roboto"', '"sans-serif"'],
 			body: ['"Roboto"', '"sans-serif"'],
 		},

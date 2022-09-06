@@ -68,10 +68,10 @@ const Home = () => {
 					</p>
 				</div>
 				<Parallax speed={-25}>
-					<div className="w-72 md:w-96 sm:ml-40 mt-64 sm:mt-0">
+					<div className="w-72 md:w-[30rem] sm:ml-40 mt-64 sm:mt-0">
 						<img
-							src={process.env.PUBLIC_URL + 'images/person.png'}
-							alt="Person"
+							src={process.env.PUBLIC_URL + 'images/robot.png'}
+							alt="Robot"
 						/>
 					</div>
 				</Parallax>
