@@ -10,7 +10,9 @@ const Button = (props: ButtonProps) => {
 				'hover:text-purple-800 hover:ring-purple-600 transition-all ' +
 				props.className
 			}
-			onClick={props.onClick ? props.onClick() : () => {}}
+			onClick={() => {
+				if (props.onClick) props.onClick();
+			}}
 			whileTap={{ scale: 0.75, transition: { duration: 0.1 } }}
 		>
 			{props.name}
