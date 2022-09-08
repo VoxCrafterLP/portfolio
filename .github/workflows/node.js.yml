@@ -2,13 +2,16 @@ name: Commit
 
 on:
   push:
-    branches: [ master ]
+    branches:
+    - master
+    
 jobs:
-  build:
+  test:
+    name: Run node.js tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Set up node 
         uses: actions/setup-node@v3.4.1
       - name: Install dependencies
