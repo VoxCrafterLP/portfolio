@@ -35,7 +35,7 @@ const Navbar = () => {
 			backgroundColor: ['#fff', 'rgb(107 33 168)', '#fff'],
 			transition: { duration: 0.5 },
 		});
-	}, [selectedItem]);
+	}, [selectedItem, indicatorControls]);
 
 	useEffect(() => {
 		navbarItems.forEach(
@@ -43,7 +43,7 @@ const Navbar = () => {
 				if (item.link === location.pathname) setSelectedItem(index);
 			}
 		);
-	}, [location]);
+	}, [location, navbarItems]);
 
 	return (
 		<div className="text-white px-4 xl:px-64 py-8">
