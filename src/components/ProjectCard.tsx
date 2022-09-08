@@ -23,6 +23,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 				className="bg-vox_gray-100 bg-opacity-20 drop-shadow-2xl rounded-2xl
 										ring ring-pink-600 ring-opacity-20 p-12 text-white group
 										flex flex-col items-center transition-all hover:scale-103"
+				onMouseLeave={() => setExtended(false)}
 			>
 				<h1 className="text-4xl font-bold mb-2">{props.name}</h1>
 				<div
@@ -48,9 +49,16 @@ const ProjectCard = (props: ProjectCardProps) => {
 					)}
 				</AnimatePresence>
 				<Button
-					name={extended ? 'Learn less' : 'Learn more'}
+					name={extended ? 'Visit project' : 'Learn more'}
 					className="group-hover:scale-103 mt-10"
-					onClick={() => setExtended(!extended)}
+					onClick={() => {
+						if (!extended) {
+							setExtended(true);
+							return;
+						}
+
+						window.open(props.link, '_blank');
+					}}
 				/>
 			</div>
 		</motion.div>
