@@ -1,10 +1,12 @@
 import { AnimationControls, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Location, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 	const indicatorControls: AnimationControls = useAnimation();
 	const [selectedItem, setSelectedItem] = useState(0);
+
+	const location: Location = useLocation();
 
 	const navbarItems: Array<{ name: string; link: string }> = [
 		{ name: 'Home', link: '/' },
@@ -34,6 +36,15 @@ const Navbar = () => {
 			transition: { duration: 0.5 },
 		});
 	}, [selectedItem]);
+
+	useEffect(() => {
+		navbarItems.forEach(
+			(item: { name: string; link: string }, index: number) => {
+				if (item.link === location.pathname)
+					setSelectedItem(index);
+			}
+		);
+	}, [location]);
 
 	return (
 		<div className="text-white px-4 xl:px-64 py-8">
