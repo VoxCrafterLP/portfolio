@@ -1,5 +1,5 @@
 import { AnimationControls, motion, useAnimation } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link, Location, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -8,13 +8,15 @@ const Navbar = () => {
 
 	const location: Location = useLocation();
 
-	const navbarItems: Array<{ name: string; link: string }> = [
-		{ name: 'Home', link: '/' },
-		{ name: 'About', link: '/about' },
-		{ name: 'Projects', link: '/projects' },
-		{ name: 'Blog', link: 'https://blog.voxcrafter.dev/' },
-		{ name: 'Contact', link: '/contact' },
-	];
+	const navbarItems: Array<{ name: string; link: string }> = useMemo(() => {
+		return [
+			{ name: 'Home', link: '/' },
+			{ name: 'About', link: '/about' },
+			{ name: 'Projects', link: '/projects' },
+			{ name: 'Blog', link: 'https://blog.voxcrafter.dev/' },
+			{ name: 'Contact', link: '/contact' },
+		];
+	}, []);
 
 	useEffect(() => {
 		const navItems = document.getElementsByClassName(
