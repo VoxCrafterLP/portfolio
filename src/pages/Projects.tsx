@@ -20,7 +20,7 @@ const Projects = () => {
 	};
 
 	return (
-		<>
+		<div className="min-h-screen">
 			<div className="flex flex-col items-center py-16">
 				<h1 className="text-4xl text-white font-semibold mb-4">My projects</h1>
 				<div className="h-1 w-12 bg-purple-800 rounded-lg"/>
@@ -39,7 +39,7 @@ const Projects = () => {
 					link="https://uelzechtkanal.lu/"
 				/>
 			</motion.div>
-		</>
+		</div>
 	);
 };
 

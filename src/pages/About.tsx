@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const About = () => {
 	return (
-		<div>
+		<div className="sm:h-[80vh] flex items-center">
 			<div
 				className="flex flex-col sm:flex-row gap-28 sm:gap-16 md:gap-28 
 											xl:gap-72 sm:mx-auto sm:w-fit p-4"
