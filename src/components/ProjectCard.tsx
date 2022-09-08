@@ -30,8 +30,12 @@ const ProjectCard = (props: ProjectCardProps) => {
 					className="h-1 w-12 bg-purple-800 rounded-lg group-hover:w-20
 												transition-all ease-in-out duration-300 mb-5"
 				/>
-				<span className="text-gray-400 mb-10">{props.type}</span>
-				<p className="text-center">{props.description}</p>
+				<span className="text-gray-400 mb-10" data-testid="type">
+					{props.type}
+				</span>
+				<p className="text-center" data-testid="description">
+					{props.description}
+				</p>
 				<AnimatePresence>
 					{extended && (
 						<motion.div
@@ -44,7 +48,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 							<h2 className="pt-10 text-xl font-semibold mb-2">
 								Details
 							</h2>
-							<p>{props.details}</p>
+							<p data-testid="details">{props.details}</p>
 						</motion.div>
 					)}
 				</AnimatePresence>
