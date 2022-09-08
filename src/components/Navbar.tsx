@@ -1,6 +1,6 @@
 import { AnimationControls, motion, useAnimation } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-import { Location, NavLink, useLocation } from 'react-router-dom';
+import { Link, Location, NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
 	const indicatorControls: AnimationControls = useAnimation();
@@ -40,8 +40,7 @@ const Navbar = () => {
 	useEffect(() => {
 		navbarItems.forEach(
 			(item: { name: string; link: string }, index: number) => {
-				if (item.link === location.pathname)
-					setSelectedItem(index);
+				if (item.link === location.pathname) setSelectedItem(index);
 			}
 		);
 	}, [location]);
@@ -49,8 +48,8 @@ const Navbar = () => {
 	return (
 		<div className="text-white px-4 xl:px-64 py-8">
 			<ul className="flex flex-col sm:flex-row sm:place-content-between gap-8 sm:gap-0">
-				<li className="text-2xl font-black tracking-wide">
-					voxcrafter.dev
+				<li className="text-2xl font-black tracking-wide hover:scale-101 transition-all">
+					<Link to={'/'}>voxcrafter.dev</Link>
 				</li>
 				<motion.span
 					className="absolute h-1 w-8 bg-white rounded-sm mt-8"
