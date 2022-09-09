@@ -82,6 +82,7 @@ const Navbar = () => {
 										className={({ isActive }) =>
 											isActive ? 'text-purple-500' : 'text-white'
 										}
+										data-testid={'nav-' + value.name}
 									>
 										{value.name}
 									</NavLink>
