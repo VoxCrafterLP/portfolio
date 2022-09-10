@@ -1,6 +1,8 @@
 import { AnimationControls, motion, useAnimation } from 'framer-motion';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Link, Location, NavLink, useLocation } from 'react-router-dom';
+import button from './Button';
+import { ContactContext } from '../context/ContactContext';
 
 const Navbar = () => {
 	const indicatorControls: AnimationControls = useAnimation();
@@ -8,15 +10,23 @@ const Navbar = () => {
 
 	const location: Location = useLocation();
 
-	const navbarItems: Array<{ name: string; link: string }> = useMemo(() => {
-		return [
-			{ name: 'Home', link: '/' },
-			{ name: 'About', link: '/about' },
-			{ name: 'Projects', link: '/projects' },
-			{ name: 'Blog', link: 'https://blog.voxcrafter.dev/' },
-			{ name: 'Contact', link: '/contact' },
-		];
-	}, []);
+	// @ts-ignore
+	const { setContactOpen } = useContext(ContactContext);
+
+	const navbarItems: Array<{ name: string; link: string; button: boolean }> =
+		useMemo(() => {
+			return [
+				{ name: 'Home', link: '/', button: false },
+				{ name: 'About', link: '/about', button: false },
+				{ name: 'Projects', link: '/projects', button: false },
+				{
+					name: 'Blog',
+					link: 'https://blog.voxcrafter.dev/',
+					button: false,
+				},
+				{ name: 'Contact', link: '#', button: true },
+			];
+		}, []);
 
 	useEffect(() => {
 		const navItems = document.getElementsByClassName(
@@ -64,7 +74,10 @@ const Navbar = () => {
 						animate={indicatorControls}
 					/>
 					{navbarItems.map(
-						(value: { name: string; link: string }, index: number) => (
+						(
+							value: { name: string; link: string; button: boolean },
+							index: number
+						) => (
 							<motion.span
 								className="hover:text-purple-600 transition-all cursor-pointer nav-item"
 								key={index}
@@ -72,10 +85,27 @@ const Navbar = () => {
 									scale: 0.6,
 									transition: { duration: 0.1 },
 								}}
-								onClick={() => setSelectedItem(index)}
+								onClick={() => {
+									if (!button) setSelectedItem(index);
+								}}
 							>
-								{value.link.startsWith('http') ? (
-									<a href={value.link}>{value.name}</a>
+								{value.button ? (
+									<span
+										onClick={() => {
+											if (value.name === 'Contact')
+												setContactOpen(true);
+										}}
+									>
+										{value.name}
+									</span>
+								) : value.link.startsWith('http') ? (
+									<a
+										href={value.link}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										{value.name}
+									</a>
 								) : (
 									<NavLink
 										to={value.link}

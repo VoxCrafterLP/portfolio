@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from './Button';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import { ContactContext } from '../context/ContactContext';
 
 const NamePresentation = () => {
+	// @ts-ignore
+	const { setContactOpen } = useContext(ContactContext);
+
 	const { text } = useTypewriter({
 		words: ['Alex Drui', 'VoxCrafter'],
 		loop: 0,
@@ -20,10 +24,9 @@ const NamePresentation = () => {
 				Fullstack web developer
 			</h2>
 			<Button
-				name="Contact"
+				name="Contact me"
 				className="mt-10 ml-8 sm:ml-0"
-				onClick={() => {
-				}}
+				onClick={() => setContactOpen(true)}
 			/>
 		</div>
 	);
