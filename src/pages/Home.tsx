@@ -16,6 +16,7 @@ const Home = () => {
                   <img
                      src={process.env.PUBLIC_URL + 'images/laptop.png'}
                      alt="Laptop"
+                     loading="eager"
                   />
                </div>
             </Parallax>
@@ -26,6 +27,7 @@ const Home = () => {
                   <img
                      src={process.env.PUBLIC_URL + 'images/technology.png'}
                      alt="Technology"
+                     loading="lazy"
                   />
                </div>
             </Parallax>
@@ -72,6 +74,7 @@ const Home = () => {
                   <img
                      src={process.env.PUBLIC_URL + 'images/robot.png'}
                      alt="Robot"
+                     loading="lazy"
                   />
                </div>
             </Parallax>

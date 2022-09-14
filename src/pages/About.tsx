@@ -46,6 +46,7 @@ const About = () => {
                <img
                   src={process.env.PUBLIC_URL + 'images/person.png'}
                   alt="Person"
+                  loading="lazy"
                />
             </div>
          </div>
