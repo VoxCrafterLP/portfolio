@@ -2,6 +2,7 @@ import React from 'react';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
 import NamePresentation from '../components/NamePresentation';
 import { motion } from 'framer-motion';
+import Button from '../components/Button';
 
 const Home = () => {
    return (
@@ -33,7 +34,7 @@ const Home = () => {
             </Parallax>
             <div className="text-white sm:ml-48">
                <h1 className="text-4xl font-bold mt-24 mb-3">
-                  Pluto's a planet.
+                  Technologies
                </h1>
                <motion.div
                   className="h-1 rounded-lg mb-8 bg-gradient-to-r from-purple-500
@@ -43,11 +44,20 @@ const Home = () => {
                   transition={{ duration: 1, delay: 0.4 }}
                />
                <p className="max-w-[40rem] tracking-wider">
-                  Arcu delectus populo morbi efficiantur ultricies legere.
-                  Reprimique mollis sanctus homero vocent integer aliquid
-                  integer. Atqui referrentur morbi corrumpit habemus viverra
-                  sumo. Pro laudem reprimique voluptaria repudiandae.
+                  I worked so far on several small and big projects including a
+                  fullstack web app for a client. The programming languages I
+                  use the most are Typescript/Javascript and Java, but I'm
+                  already planning out a project that will be written in Go. A
+                  list of my skills can be seen on my GitHub profile.
                </p>
+               <a href="https://github.com/VoxCrafterLP/"
+                  target="_blank" rel="noopener noreferrer"
+               >
+                  <Button
+                    name="My GitHub"
+                    className="mt-10"
+                  />
+               </a>
             </div>
          </div>
          <div className="mt-96 sm:mt-[45rem] px-8 2xl:px-64 flex flex-col xl:flex-row pb-96">

@@ -35,10 +35,21 @@ const Projects = () => {
          >
             <ProjectCard
                name="Uelzechtkanal"
-               description="Tempor delectus interesset quaerendum utinam constituam latine voluptaria saepe dui. Simul eum dapibus populo leo. Habemus vis facilisi lorem nostrum definiebas assueverit luctus duis."
+               description="A fullstack web app that is being used to improve PR by providing viewers with an interface
+                            to look for videos about topics that they're interested in. The second use case is to
+                            improve the internal management of students and their work."
                type="Fullstack web application"
-               details="Posidonium eleifend quam sententiae vulputate maximus donec. Parturient iuvaret senectus viverra rhoncus reprehendunt alienum reque atomorum. Inimicus menandri arcu tale a altera nonumy neglegentur. Malorum inani curae prodesset honestatis."
+               details="The backend is written in Typescript using the Express.js framework and Prisma as on ORM.
+                        It uses MariaDB under the hood. The frontend uses Next.js to improve search engine results."
                link="https://uelzechtkanal.lu/"
+            />
+            <ProjectCard
+               name="My portfolio"
+               description="The portfolio website you're currently on."
+               type="Fullstack web application"
+               details="This website is made with React and Framer motion for the animation. Nearly every component has
+                        multiple unit tests that automatically run in a CI/CD pipeline."
+               link="https://github.com/VoxCrafterLP/portfolio"
             />
          </motion.div>
       </div>

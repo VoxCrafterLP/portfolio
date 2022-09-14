@@ -34,12 +34,13 @@ const About = () => {
                   className="text-white max-w-[40rem] tracking-wider text-center 
 												sm:text-left"
                >
-                  Eget sea duo recteque urna scelerisque. Mazim sapientem animal
-                  curabitur posse quot porta duis pro. Vero nonumy id
-                  contentiones epicuri rutrum. Iriure fastidii posuere netus
-                  adipisci parturient vivamus ridiculus menandri. Repudiare ut
-                  vitae dolor aliquip. Aliquam sapientem fermentum maecenas
-                  faucibus nonumy. Feugait iriure electram quidam netus urna.
+                  Hey! My name's Alex and I'm a 17 years old student in
+                  Luxembourg. I started programming at the age of 13 and it
+                  evolved to a passion of mine. I run a small homelab in my
+                  basement and host some services for myself as well for some of
+                  my friends. I got into FPV a about 2 years ago and enjoy
+                  flying FPV drones ever since. Right now I'm planning into
+                  getting into the car modding scene.
                </p>
             </div>
             <div className="w-64 mx-auto sm:m-0">

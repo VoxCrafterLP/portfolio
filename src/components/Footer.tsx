@@ -24,25 +24,33 @@ const Footer = () => {
                </h1>
                <div className="w-16 h-1 rounded-xl bg-purple-800 mb-8 mx-auto" />
                <div className="flex gap-8 text-purple-600">
-                  <a href="https://youtube.com/voxcrafter_lp/">
+                  <a href="https://youtube.com/voxcrafter_lp/"
+                     target="_blank" rel="noopener noreferrer"
+                  >
                      <FontAwesomeIcon
                         icon={faYoutube}
                         className="hover:text-purple-500 hover:scale-105"
                      />
                   </a>
-                  <a href="https://twitter.com/voxcrafter_lp/">
+                  <a href="https://twitter.com/voxcrafter_lp/"
+                     target="_blank" rel="noopener noreferrer"
+                  >
                      <FontAwesomeIcon
                         icon={faTwitter}
                         className="hover:text-purple-500 hover:scale-105"
                      />
                   </a>
-                  <a href="https://github.com/voxcrafterlp/">
+                  <a href="https://github.com/voxcrafterlp/"
+                     target="_blank" rel="noopener noreferrer"
+                  >
                      <FontAwesomeIcon
                         icon={faGithub}
                         className="hover:text-purple-500 hover:scale-105"
                      />
                   </a>
-                  <a href="https://instagram.com/voxcrafter_lp/">
+                  <a href="https://instagram.com/voxcrafter_lp/"
+                     target="_blank" rel="noopener noreferrer"
+                  >
                      <FontAwesomeIcon
                         icon={faInstagram}
                         className="hover:text-purple-500 hover:scale-105"
