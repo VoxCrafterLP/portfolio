@@ -15,6 +15,7 @@ const Footer = () => {
          onMouseEnter={() => setShowCredits(true)}
          onMouseLeave={() => setShowCredits(false)}
          className="overflow-hidden"
+         data-testid="footer"
       >
          <div className="text-white text-center flex flex-col items-center pt-4 pb-6 bg-dark_gray-100">
             <div>
@@ -54,6 +55,7 @@ const Footer = () => {
                   'overflow-hidden transition-all ' +
                   (showCredits ? 'h-fit mt-4' : 'h-0 mt-0')
                }
+               data-testid="footer-credits"
             >
                <p className="text-gray-400">
                   Images by{' '}

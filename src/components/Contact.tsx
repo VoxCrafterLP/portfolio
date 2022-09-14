@@ -20,6 +20,7 @@ const Contact = () => {
                <div
                   className="h-full w-full absolute top-0 left-0 bg-vox_gray-200 opacity-80 disable-scrollbar"
                   onClick={() => setContactOpen(false)}
+                  data-testid="contact-background"
                />
                <AnimatePresence>
                   <motion.div
@@ -48,10 +49,12 @@ const Contact = () => {
                               className={
                                  'bg-vox_gray-200 text-white w-full h-12 rounded-2xl px-4 outline-none ' +
                                  'ring-opacity-70 mb-6 focus:ring focus:ring-2 ring-purple-500 ' +
-                                 (emailValid !== undefined && 'ring-2 ') +
-                                 (emailValid
-                                    ? '!ring-green-500 '
-                                    : '!ring-red-500')
+                                 (emailValid !== undefined ? 'ring-2 ' : '') +
+                                 (emailValid !== undefined
+                                    ? emailValid
+                                       ? '!ring-green-500 '
+                                       : '!ring-red-500'
+                                    : '')
                               }
                               onChange={(event) => {
                                  setEmail(event.target.value);
@@ -61,6 +64,7 @@ const Contact = () => {
                                     )
                                  );
                               }}
+                              data-testid="contact-email"
                            />
                            <textarea
                               value={message}
