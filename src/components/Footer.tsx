@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
    faGithub,
@@ -8,8 +8,14 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
+   const [showCredits, setShowCredits] = useState(false);
+
    return (
-      <div>
+      <div
+         onMouseEnter={() => setShowCredits(true)}
+         onMouseLeave={() => setShowCredits(false)}
+         className="overflow-hidden"
+      >
          <div className="text-white text-center flex flex-col items-center pt-4 pb-6 bg-dark_gray-100">
             <div>
                <h1 className="font-semibold text-2xl text-white mb-2 mt-4">
@@ -42,6 +48,23 @@ const Footer = () => {
                      />
                   </a>
                </div>
+            </div>
+            <div
+               className={
+                  'overflow-hidden transition-all ' +
+                  (showCredits ? 'h-fit mt-4' : 'h-0 mt-0')
+               }
+            >
+               <p className="text-gray-400">
+                  Images by{' '}
+                  <a
+                     href="https://www.freepik.com/author/fullvector"
+                     className="text-purple-400"
+                  >
+                     @fullvector
+                  </a>{' '}
+                  on Freepik
+               </p>
             </div>
          </div>
          <div className="bg-dark_gray-200 text-gray-400 flex flex-col items-center py-1">
