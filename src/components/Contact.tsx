@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { ContactContext } from '../context/ContactContext';
 import Button from './Button';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Contact = () => {
    // @ts-ignore
@@ -12,6 +13,32 @@ const Contact = () => {
    const [email, setEmail] = useState('');
    const [emailValid, setEmailValid] = useState<boolean>();
    const [message, setMessage] = useState('');
+   const [recaptcha, setRecaptcha] = useState('');
+
+   function submit(): void {
+      if (!emailValid) return;
+
+      const payload = {
+         email,
+         message,
+         recaptcha,
+      };
+
+      fetch('https://contact.voxcrafter.dev/', {
+         method: 'POST',
+         body: JSON.stringify(payload),
+         headers: {
+            'Content-Type': 'application/json',
+         },
+      })
+				.then(() => {
+					setContactOpen(false);
+					setEmail('');
+					setMessage('');
+					setRecaptcha('');
+					setEmailValid(undefined);
+				})
+   }
 
    return (
       <div className="z-30">
@@ -75,7 +102,19 @@ const Contact = () => {
                                  setMessage(event.target.value)
                               }
                            />
-                           <Button name="Submit" className="hover:!px-16" />
+                           <ReCAPTCHA
+                              sitekey="6LeCUf0hAAAAAMPZNFP2yn0Na0lw0qvPaVS296H2"
+                              onChange={(token: string | null) =>
+                                 setRecaptcha(token as string)
+                              }
+                              theme="dark"
+                              className="mb-8"
+                           />
+                           <Button
+                              name="Submit"
+                              className="hover:!px-16"
+                              onClick={() => submit()}
+                           />
                         </div>
                      </div>
                   </motion.div>
