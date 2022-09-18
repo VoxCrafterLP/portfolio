@@ -35,11 +35,11 @@ const Projects = () => {
          >
             <ProjectCard
                name="Uelzechtkanal"
-               description="A fullstack web app that is being used to improve PR by providing viewers with an interface
-                            to look for videos about topics that they're interested in. The second use case is to
-                            improve the internal management of students and their work."
+               description="A fullstack web application that is used to enhance public relations by providing viewers
+                            with an interface to search for videos on topics they are interested in. A second objective
+                            was to improve the internal management of students and their work."
                type="Fullstack web application"
-               details="The backend is written in Typescript using the Express.js framework and Prisma as on ORM.
+               details="The backend is written in Typescript using the Express.js framework and Prisma as an ORM.
                         It uses MariaDB under the hood. The frontend uses Next.js to improve search engine results."
                link="https://uelzechtkanal.lu/"
             />
@@ -47,7 +47,7 @@ const Projects = () => {
                name="My portfolio"
                description="The portfolio website you're currently on."
                type="Fullstack web application"
-               details="This website is made with React and Framer motion for the animation. Nearly every component has
+               details="This website is made using React and Framer motion for the animation. Nearly every component has
                         multiple unit tests that automatically run in a CI/CD pipeline."
                link="https://github.com/VoxCrafterLP/portfolio"
             />
