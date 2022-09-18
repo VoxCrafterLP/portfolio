@@ -1,10 +1,21 @@
-<xml version="1.0" encoding="UTF-8">
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
     <url>
-        <loc>https://voxcrafter.dev/about</loc>
+        <loc>https://voxcrafter.dev/</loc>
+        <lastmod>2022-09-18T16:37:34+00:00</lastmod>
     </url>
     <url>
-        <loc>https://voxcrafter.dev/projects</loc>
+        <loc>https://voxcrafter.dev/about/</loc>
+        <lastmod>2022-09-18T16:37:34+00:00</lastmod>
     </url>
+    <url>
+        <loc>https://voxcrafter.dev/projects/</loc>
+        <lastmod>2022-09-18T16:37:34+00:00</lastmod>
+    </url>
+
 </urlset>
-</xml>
