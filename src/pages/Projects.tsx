@@ -32,6 +32,7 @@ const Projects = () => {
             variants={wrapperAnimation}
             initial="hidden"
             animate="visible"
+            role="list"
          >
             <ProjectCard
                name="Uelzechtkanal"

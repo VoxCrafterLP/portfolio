@@ -35,14 +35,19 @@ const App = () => {
          >
             <Contact />
             <Navbar />
-            <AnimatePresence>
-               <Routes location={location} key={location.pathname}>
-                  <Route path="/" element={getElement(<Home />)} />
-                  <Route path="/about" element={getElement(<About />)} />
-                  <Route path="/projects" element={getElement(<Projects />)} />
-                  <Route path="*" element={<NotFound />} />
-               </Routes>
-            </AnimatePresence>
+            <main role="main">
+               <AnimatePresence>
+                  <Routes location={location} key={location.pathname}>
+                     <Route path="/" element={getElement(<Home />)} />
+                     <Route path="/about" element={getElement(<About />)} />
+                     <Route
+                        path="/projects"
+                        element={getElement(<Projects />)}
+                     />
+                     <Route path="*" element={<NotFound />} />
+                  </Routes>
+               </AnimatePresence>
+            </main>
             <Footer />
          </div>
       </ContactContext.Provider>

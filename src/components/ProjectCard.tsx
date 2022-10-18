@@ -18,7 +18,7 @@ const ProjectCard = (props: ProjectCardProps) => {
    const [extended, setExtended] = useState(false);
 
    return (
-      <motion.div variants={cardAnimation}>
+      <motion.div variants={cardAnimation} role="listitem">
          <div
             className="bg-vox_gray-100 bg-opacity-20 drop-shadow-2xl rounded-2xl
 										ring ring-pink-600 ring-opacity-20 p-12 text-white group

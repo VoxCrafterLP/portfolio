@@ -16,7 +16,9 @@ const NamePresentation = () => {
    return (
       <div className="text-white sm:w-[32rem]">
          <span className="absolute w-1 h-48 sm:h-28 bg-white rounded-lg" />
-         <h1 className="ml-8 text-5xl sm:text-7xl font-semibold">
+         <h1 className="ml-8 text-5xl sm:text-7xl font-semibold"
+             role="presentation"
+         >
             <span>{text}</span>
             <Cursor />
          </h1>

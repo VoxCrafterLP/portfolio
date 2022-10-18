@@ -2,7 +2,7 @@ import { expect, Page, test } from '@playwright/test';
 
 test('test navigation', async ({ page }: { page: Page }) => {
    //Home
-   await page.goto('http://localhost:3000/');
+   await page.goto('/');
    await expect(page.getByTestId('nav-Home')).toHaveClass('text-purple-500');
    await expect(page.getByTestId('nav-About')).not.toHaveClass(
       'text-purple-500'

@@ -11,7 +11,7 @@ const Footer = () => {
    const [showCredits, setShowCredits] = useState(false);
 
    return (
-      <div
+      <footer
          onMouseEnter={() => setShowCredits(true)}
          onMouseLeave={() => setShowCredits(false)}
          className="overflow-hidden"
@@ -24,32 +24,44 @@ const Footer = () => {
                </h1>
                <div className="w-16 h-1 rounded-xl bg-purple-800 mb-8 mx-auto" />
                <div className="flex gap-8 text-purple-600">
-                  <a href="https://youtube.com/voxcrafter_lp/"
-                     target="_blank" rel="noopener noreferrer"
+                  <a
+                     href="https://youtube.com/voxcrafter_lp/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="My YouTube channel"
                   >
                      <FontAwesomeIcon
                         icon={faYoutube}
                         className="hover:text-purple-500 hover:scale-105"
                      />
                   </a>
-                  <a href="https://twitter.com/voxcrafter_lp/"
-                     target="_blank" rel="noopener noreferrer"
+                  <a
+                     href="https://twitter.com/voxcrafter_lp/"
+                     target="_blank"
+                     rel="noopener noreferrer"
                   >
                      <FontAwesomeIcon
                         icon={faTwitter}
                         className="hover:text-purple-500 hover:scale-105"
+                        title="My Twitter account"
                      />
                   </a>
-                  <a href="https://github.com/voxcrafterlp/"
-                     target="_blank" rel="noopener noreferrer"
+                  <a
+                     href="https://github.com/voxcrafterlp/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="My GitHub account"
                   >
                      <FontAwesomeIcon
                         icon={faGithub}
                         className="hover:text-purple-500 hover:scale-105"
                      />
                   </a>
-                  <a href="https://instagram.com/voxcrafter_lp/"
-                     target="_blank" rel="noopener noreferrer"
+                  <a
+                     href="https://instagram.com/voxcrafter_lp/"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     title="My Instagram account"
                   >
                      <FontAwesomeIcon
                         icon={faInstagram}
@@ -80,7 +92,7 @@ const Footer = () => {
          <div className="bg-dark_gray-200 text-gray-400 flex flex-col items-center py-1">
             <span>©2022 Alex Drui</span>
          </div>
-      </div>
+      </footer>
    );
 };
 

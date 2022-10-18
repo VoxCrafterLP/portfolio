@@ -58,16 +58,16 @@ const Navbar = () => {
    }, [location, navbarItems]);
 
    return (
-      <div className="text-white px-4 xl:px-64 py-8">
+      <nav className="text-white px-4 xl:px-64 py-8" role="navigation">
+         <motion.span
+            className="absolute h-1 w-8 bg-white rounded-sm mt-8"
+            animate={{ width: '10rem', backgroundColor: 'rgb(147 51 234)' }}
+            transition={{ ease: 'easeOut', duration: 2 }}
+         />
          <ul className="flex flex-col sm:flex-row sm:place-content-between gap-8 sm:gap-0">
             <li className="text-2xl font-black tracking-wide hover:scale-101 transition-all">
                <Link to={'/'}>voxcrafter.dev</Link>
             </li>
-            <motion.span
-               className="absolute h-1 w-8 bg-white rounded-sm mt-8"
-               animate={{ width: '10rem', backgroundColor: 'rgb(147 51 234)' }}
-               transition={{ ease: 'easeOut', duration: 2 }}
-            />
             <li className="flex gap-4 sm:gap-10 font-semibold text-lg">
                <motion.span
                   className="absolute h-1 w-8 bg-white rounded-sm mt-8"
@@ -122,7 +122,7 @@ const Navbar = () => {
                )}
             </li>
          </ul>
-      </div>
+      </nav>
    );
 };
 

@@ -1,7 +1,7 @@
 import { expect, Page, test } from '@playwright/test';
 
 test('test initial loading', async ({ page }: { page: Page }) => {
-   await page.goto('http://localhost:3000/');
+   await page.goto('/');
 
    await expect(page).toHaveTitle('Alex Drui | Portfolio');
 
