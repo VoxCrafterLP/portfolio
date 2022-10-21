@@ -9,20 +9,26 @@ const About = () => {
 											xl:gap-72 sm:mx-auto sm:w-fit p-4"
          >
             <div className="flex flex-col items-center sm:items-start">
-               <div className="relative w-fit">
+               <motion.div
+                  className="relative w-fit"
+                  initial={{ width: '0rem' }}
+                  whileInView={{ width: '18rem' }}
+                  transition={{ duration: 1, delay: 0.4 }}
+               >
                   <span
-                     className="relative z-20 text-7xl text-white font-handwritten 
-														 font-semibold"
+                     className="relative z-20 text-7xl text-white font-handwritten
+														 font-semibold whitespace-pre"
                   >
                      About me
                   </span>
                   <span
-                     className="absolute -top-4 -inset-1 text-[4.6rem] text-pink-600 
-														blur-md font-handwritten font-semibold"
+                     className="absolute -top-4 -inset-1 text-[4.6rem] text-pink-600
+														blur-md font-handwritten font-semibold
+														overflow-hidden"
                   >
                      About me
                   </span>
-               </div>
+               </motion.div>
                <motion.div
                   className="h-1 rounded-lg mb-8 bg-gradient-to-r from-purple-500
 												 to-purple-900 mt-8"
