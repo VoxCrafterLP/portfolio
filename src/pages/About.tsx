@@ -34,7 +34,7 @@ const About = () => {
                   className="text-white max-w-[40rem] tracking-wider text-center 
 												sm:text-left"
                >
-                  Hey! My name is Alex and I am a 17-year-old student in
+                  Hey! My name is Alex and I am a 18-year-old student in
                   Luxembourg. I started programming at the age of 13, and it
                   evolved into a passion of mine. I run a small homelab in my
                   basement and host some services for myself as well as some of
